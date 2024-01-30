@@ -19,4 +19,4 @@ This project aims to recognize handwritten numbers using a machine learning mode
 ## Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/akshaysatyam2/NumberImagetoText.githttps://github.com/akshaysatyam2/NumberImagetoText.git
+   git clone https://github.com/akshaysatyam2/NumberImagetoText.git
