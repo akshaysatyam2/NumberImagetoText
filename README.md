@@ -11,7 +11,7 @@ This project aims to recognize handwritten numbers using a machine learning mode
 - **User Interface:** The project includes a simple user interface where users can upload an image containing a number in words, and the model predicts its numeric value.
 
 ## Requirements
-- Python 3
+- Python 3.10
 - TensorFlow
 - NumPy
 - OpenCV
