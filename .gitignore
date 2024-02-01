@@ -1,3 +1,6 @@
 venv
 .env
-WebApp/num.model
+.idea
+dataset/*
+WebApp/temp/*
+WebApp/custom.model
