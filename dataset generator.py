@@ -1,10 +1,10 @@
 from PIL import Image, ImageDraw, ImageFont
 import os
-import inflect  # Import the inflect library
+import inflect
 
 # Create a directory to store the images
-if not os.path.exists('number_images'):
-    os.makedirs('number_images')
+if not os.path.exists('dataset'):
+    os.makedirs('dataset')
 
 # Create an inflect engine
 p = inflect.engine()
