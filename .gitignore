@@ -1,6 +1,8 @@
+.idea
+__pycache__
+.git
 venv
 .env
-.idea
 dataset/*
 WebApp/temp/*
 WebApp/custom.model
