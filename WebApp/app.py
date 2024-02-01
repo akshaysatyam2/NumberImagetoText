@@ -1,3 +1,4 @@
+import logging
 import os
 
 import cv2
@@ -13,7 +14,7 @@ project_index = path.find('WebApp')
 
 # Directories of project working
 working_directory = path[:project_index + 6] + '/'
-temp_directory = working_directory + 'temp/'
+temp_directory = os.path.join(working_directory, 'temp/')
 
 
 @app.route('/')
@@ -34,7 +35,7 @@ def api_predict():
         return jsonify(response)
 
 
-@app.route('/', methods=['POST'])
+@app.route('/show_result', methods=['POST'])
 def result():
     if request.method == "POST":
         file = request.files['checkImage']
@@ -70,6 +71,7 @@ def getPredictions(file_url):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 # To test this REST API, we can use a tool like curl or a web client(ex- Postman) to send POST requests to your endpoint at http://127.0.0.1:5000/api/predict.
 # We should send a JSON payload with a 'new_review' field to get the prediction result.
