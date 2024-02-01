@@ -3,13 +3,15 @@ import cv2
 import numpy as np
 
 # Load the model
-model = tf.keras.models.load_model("custom.model")
+model = tf.keras.models.load_model("ResNet50custom.model")
+
+test_data = "dataset/1/capitalize_1.png"
 
 # Read and preprocess the input image
-img = cv2.imread("dataset/1/capitalize_1.png")
-img = cv2.resize(img, (64, 64))  # Resize to match the expected input shape
+img = cv2.imread(test_data)
+img = cv2.resize(img, (64, 64))
 img = img / 255.0
-img = np.expand_dims(img, axis=0)  # Add batch dimension
+img = np.expand_dims(img, axis=0)
 
 # Make a prediction
 prediction = model.predict(img)
@@ -18,10 +20,8 @@ prediction = model.predict(img)
 print(f"Number: {np.argmax(prediction)}")
 
 # Display the image
-cv2.imshow("Image", cv2.imread("dataset/1/capitalize_1.png"))
+cv2.imshow("Image", cv2.imread(test_data))
 cv2.waitKey(0)
-
-
 
 # ## For MINST model
 #

@@ -48,17 +48,15 @@ def result():
 
 
 def getPredictions(file_url):
-    model = tf.keras.models.load_model("num.model")
+    model = tf.keras.models.load_model("ResNet50custom.model")
 
-    img = cv2.imread(file_url)[:, :, 0]
-    img = cv2.resize(img, (28, 28))
-
-    img = np.invert(np.array([img]))
-
-    img = img.reshape(1, 28, 28)
-
+    img = cv2.imread(file_url)
+    # Read and preprocess the input image
+    img = cv2.resize(img, (64, 64))
     img = img / 255.0
+    img = np.expand_dims(img, axis=0)
 
+    # Make a prediction
     prediction = model.predict(img)
 
     result = np.argmax(prediction)

@@ -4,3 +4,4 @@ venv
 dataset/*
 WebApp/temp/*
 WebApp/custom.model
+WebApp/ResNet50custom.model
