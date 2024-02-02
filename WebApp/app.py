@@ -48,7 +48,7 @@ def result():
 
 
 def getPredictions(file_url):
-    model = tf.keras.models.load_model("ResNet50custom.model")
+    model = tf.keras.models.load_model("CNNcustom.model")
 
     img = cv2.imread(file_url)
     # Read and preprocess the input image

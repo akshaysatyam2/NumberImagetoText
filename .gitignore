@@ -6,4 +6,5 @@ venv
 dataset/*
 WebApp/temp/*
 WebApp/custom.model
+WebApp/CNNcustom.model
 WebApp/ResNet50custom.model
